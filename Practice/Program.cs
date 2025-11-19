@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using SearchAlgorithms;
+using SortAlgorithms;
 
 namespace MyApp
 {
@@ -10,11 +11,12 @@ namespace MyApp
             var id = Guid.NewGuid();
             Console.WriteLine(id.ToString());
 
-            int[] array = { 10, 20, 43, 56, 78, 100, 101, 124, 156 };
+            int[] array = { 20, 43, 8, 10, 78, 2, 1, 3, 100, 56, 101, 124, 156 };
 
-            foreach (var i in array)
+            BubbleSort.Sort(array);
+            for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine(BinarySearch.Find(array, i));
+                Console.Write(array[i] + ", ");
             }
 
         }
