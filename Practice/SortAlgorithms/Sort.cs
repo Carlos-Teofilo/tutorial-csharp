@@ -1,9 +1,9 @@
 ﻿namespace SortAlgorithms
 {
 
-    public class BubbleSort
+    public class Sort
     {
-        static public void Sort(int[] array)
+        static public void BubbleSort(int[] array)
         {
             int size = array.Length - 1;
             for (int i = 0; i < size; i++)

@@ -1,8 +1,17 @@
 ﻿namespace SearchAlgorithms
 {
-    public class BinarySearch
+    public class Search
     {
-        public static int Find(int[] array, int value)
+        public static int SequentialSearch(int[] array, int value)
+        {
+            for (int i = 0; i < array.Length; i++)
+                if (array[i] == value)
+                    return i;
+
+            return -1;
+        }
+
+        public static int BinarySearch(int[] array, int value)
         {
             int begin = 0;
             int end = array.Length - 1;

@@ -8,17 +8,19 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-            var id = Guid.NewGuid();
-            Console.WriteLine(id.ToString());
+            int[] array = {32, 54, 123, 75, 76, 23};
+            foreach (var n in array)
+                Console.Write(n + ", ");
+            
+            Console.WriteLine("");
 
-            int[] array = { 20, 43, 8, 10, 78, 2, 1, 3, 100, 56, 101, 124, 156 };
+            Sort.BubbleSort(array);
 
-            BubbleSort.Sort(array);
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.Write(array[i] + ", ");
-            }
+            foreach (var n in array)
+                Console.Write(n + ", ");
 
+            Console.WriteLine(Search.BinarySearch(array, 54));
         }
+
     }
 }
